@@ -1,1 +1,0 @@
-const SIRKET_BILGILERI = { ad: 'Örnek Teknik Servis', telefon: '0123 456 78 90', adres: 'İstanbul, Türkiye', vergiNo: '1234567890' };
