@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Beyaz Eşya Servisi | Mersin Silifke Teknik Destek</title>
+  <meta name="description" content="Mersin Silifke'de beyaz eşya servisi. Buzdolabı, çamaşır makinesi, klima, fırın tamiri için hemen arayın.">
+  <link rel="icon" href="/favicon.ico" />
+  <style>
+        body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #1a202c;
+      color: #d1d5db;
+      line-height: 1.5;
+    }
+
+    header, footer {
+      background: #0a1d56;
+      color: white;
+      padding: 1rem 1rem;
+    }
+
+   
+    header nav, footer nav {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    header nav a, footer nav a {
+      color: #ffd700;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 6px 8px;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+      white-space: nowrap;
+    }
+
+    header nav a:hover, footer nav a:hover {
+      text-decoration: underline;
+      background-color: #ffd700;
+      color: #0a1d56;
+    }
+
+   
+    select#pageSelect {
+      font-weight: bold;
+      padding: 6px 12px;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      background: #0a1d56;
+      color: #ffd700;
+      min-width: 160px;
+      transition: background-color 0.3s;
+    }
+    select#pageSelect:hover, select#pageSelect:focus {
+      background-color: #13327a;
+      outline: none;
+    }
+
+    select#pageSelect option {
+      color: #0a1d56;
+      font-weight: normal;
+    }
+
+    /* Main container */
+    main.container {
+      max-width: 900px;
+      margin: 2rem auto 3rem auto;
+      padding: 0 1rem;
+    }
+
+    main.container h1 {
+      margin-top: 0;
+      color: #ffd700;
+      font-size: 2rem;
+    }
+
+    main.container p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: #d1d5db;
+    }
+
+   
+    .btn-call {
+      display: inline-block;
+      margin: 1rem 0 2rem 0;
+      padding: 12px 24px;
+      background: #ffd700;
+      color: #0a1d56;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 1.2rem;
+      transition: background-color 0.3s;
+      user-select: none;
+    }
+    .btn-call:hover, .btn-call:focus {
+      background-color: #fcd200;
+      text-decoration: underline;
+      outline: none;
+    }
+
+    main.container p.note {
+      color: #b0b8c1;
+      font-size: 0.9rem;
+      margin-top: 1rem;
+    }
+
+    
+    .yorumlar {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1rem 4rem 1rem;
+    }
+    .yorumlar h2 {
+      text-align: center;
+      color: #ffd700;
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+    }
+    .yorum-listesi {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+    .yorum {
+      background: #f9f9f9;
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      color: #0a1d56;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .yorum h3 {
+      margin: 0 0 0.5rem 0;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .yorum p {
+      font-style: italic;
+      margin-bottom: 0.75rem;
+      font-size: 1rem;
+    }
+    .yorum .stars {
+      color: #ffd700;
+      font-size: 1.1rem;
+      align-self: flex-start;
+    }
+
+   
+    footer p {
+      margin-top: 0.75rem;
+      font-size: 0.85rem;
+      color: #ccc;
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    /* Responsive Ayarlar */
+    @media (max-width: 768px) {
+      header nav, footer nav {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+      }
+
+      header nav a, footer nav a {
+        margin: 0;
+      }
+
+      select#pageSelect {
+        min-width: 100%;
+        max-width: 320px;
+        margin-top: 6px;
+      }
+
+      main.container h1 {
+        font-size: 1.6rem;
+      }
+
+      main.container p, .yorum p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 400px) {
+      main.container {
+        margin: 1.5rem 1rem 3rem 1rem;
+      }
+
+      main.container h1 {
+        font-size: 1.4rem;
+      }
+
+      .btn-call {
+        font-size: 1rem;
+        padding: 10px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+ <header>
+  <nav>
+    <a href="index.html">Anasayfa</a>
+    <select id="pageSelect" style="padding:6px; font-weight:bold; margin-left:10px; background:#0a1d56; color:#ffd700; border:none; border-radius:4px; font-size:1rem;">
+      <option value="" selected style="color:#0a1d56;">Menü ▼</option>
+      <option value="hakkimizda.html">Hakkımızda</option>
+      <option value="iletisim.html">İletişim</option>
+      <option value="hizmetler.html">Hizmetlerimiz</option>
+      <option value="hizmet.html?service=beyaz-esya-servisi">Beyaz Eşya Servisi</option>
+<option value="hizmet.html?service=buzdolabi">Buzdolabı</option>
+<option value="hizmet.html?service=camasir-makinesi">Çamaşır Makinesi</option>
+<option value="hizmet.html?service=bulasik-makinesi">Bulaşık Makinesi</option>
+<option value="hizmet.html?service=firin">Fırın</option>
+<option value="hizmet.html?service=klima">Klima</option>
+<option value="hizmet.html?service=kombi">Kombi</option>
+<option value="hizmet.html?service=televizyon">Televizyon</option>
+    </select>
+  </nav>
+</header>
+
+<script>
+  document.getElementById('pageSelect').addEventListener('change', function() {
+    const val = this.value;
+    if(val) window.location.href = val;
+  });
+</script>
+  <main class="container">
+    <h1>Beyaz Eşya Servisi</h1>
+    <p>Beyaz Eşya Servis ve tamir hizmetimizle arızalarınızın hızlı bir şekilde çözülmesini sağlıyoruz Garantisi olmayan cihazlar için profesyonel bakım, onarım ve tamir hizmetleri. Hemen ara'ya tıklayarak bize ulaşıp randevu oluşturabilirsiniz,Veya Şimdi ara'ya tıklayarak müşteri hizmetlerimize bağlanabilirsiniz</p>
+    <a href="tel:+905065019612" class="btn-call">📞 Şimdi Ara: 0506 501 96 12</a>
+<p>Buzdolabı, çamaşır makinesi tamiri, günlük yaşamı kolaylaştırır. Fırın, klima, kombi servisi, konforu sağlar.
+
+ </p>
+
+    <p style="color:#d1d5db; margin-top: 0.5rem; font-size: 0.9rem;">
+    Bu site özel teknik servis hizmeti sunar. Yetkili servis değildir. Sadece garantisi olmayan cihazlar için hizmet verilmektedir.
+  </p>
+  </main>
+
+  <section class="yorumlar">
+    <h2>Müşteri Yorumları</h2>
+    <div class="yorum-listesi">
+      <article class="yorum">
+        <h3>Ali Y.</h3>
+        <p>"Çok hızlı ve güvenilir hizmet, memnun kaldım."</p>
+        <div class="stars">★★★★★</div>
+      </article>
+      <article class="yorum">
+        <h3>Zeynep K.</h3>
+        <p>"Klimamı tamir ettirdim, fiyat uygundu."</p>
+        <div class="stars">★★★★☆</div>
+      </article>
+      <article class="yorum">
+        <h3>Mustafa A.</h3>
+        <p>"Buzdolabı tamiri beklediğimden uzun sürdü."</p>
+        <div class="stars">★★★☆☆</div>
+      </article>
+      <article class="yorum">
+        <h3>Ayşe M.</h3>
+        <p>"Teknisyen çok bilgiliydi, teşekkürler."</p>
+        <div class="stars">★★★★★</div>
+      </article>
+      <article class="yorum">
+        <h3>Fatma D.</h3>
+        <p>"Servis biraz geç geldi ama sorun çözüldü."</p>
+        <div class="stars">★★★★☆</div>
+      </article>
+      <article class="yorum">
+        <h3>Emre S.</h3>
+        <p>"Memnun kalmadım, tekrar arıza yaptı."</p>
+        <div class="stars">★★☆☆☆</div>
+      </article>
+      <article class="yorum">
+        <h3>Canan H.</h3>
+        <p>"Mükemmel hizmet!"</p>
+        <div class="stars">★★★★★</div>
+      </article>
+      <article class="yorum">
+        <h3>Kerem C.</h3>
+        <p>"Ortalama bir servis deneyimi yaşadım."</p>
+        <div class="stars">★★★☆☆</div>
+      </article>
+      <article class="yorum">
+        <h3>Selin T.</h3>
+        <p>"Tavsiye ederim, işlerini iyi yapıyorlar."</p>
+        <div class="stars">★★★★★</div>
+      </article>
+      <article class="yorum">
+        <h3>Burak B.</h3>
+        <p>"İletişim konusunda eksikleri var."</p>
+        <div class="stars">★★★☆☆</div>
+      </article>
+      <article class="yorum">
+        <h3>Cemre Z.</h3>
+        <p>"Fiyat/performans açısından başarılı."</p>
+        <div class="stars">★★★★☆</div>
+      </article>
+      <article class="yorum">
+        <h3>Tayfun E.</h3>
+        <p>"Biraz pahalı ama kaliteli hizmet."</p>
+        <div class="stars">★★★★☆</div>
+      </article>
+    </div>
+  </section>
+
+  <footer>
+    <nav>
+      <a href="index.html">Anasayfa</a>
+      <a href="hakkimizda.html">Hakkımızda</a>
+      <a href="iletisim.html">İletişim</a>
+      <a href="hizmetler.html">Hizmetlerimiz</a>
+      <a href="gizlilikpolitikasi.html">Gizlilik Politikası</a>
+      <a href="kvkk.html">KVKK</a>
+    </nav>
+    <p style="margin-top: 1rem; font-size: 0.85rem; color: #ccc;">&copy; 2025 Beyaz Eşya Servisi - Mersin / Silifke</p>
+     <p>Bu site özel teknik servis hizmeti sunar. Yetkili servis değildir. Sadece garantisi olmayan cihazlar için hizmet verilmektedir.</p>
+  </footer>
+</body>
+</html>
