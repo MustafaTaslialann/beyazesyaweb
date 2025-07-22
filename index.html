@@ -153,14 +153,18 @@ footer nav a:hover {
  @media (max-width: 600px) {
   header nav {
     justify-content: center;
-    gap:6px;
+    gap: 4px; 
+    padding: 0 8px; 
+    flex-wrap: nowrap; 
+    overflow-x: auto; 
   }
 
   header nav a,
   header nav select {
+    font-size: 0.85rem; 
+    padding: 4px 6px;
     flex: 0 0 auto;
-    display: inline-flex;
-    align-items: center;
+    white-space: nowrap; 
   }
 }
   </style>
